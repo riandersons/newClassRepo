@@ -1,0 +1,11 @@
+// Throw error.
+const mockError = function() {
+  throw new Error("Error: Filesystem appears corrupted, or file does not exist. Try again later.");
+};
+
+// Mock error due to filesystem.
+const readFile = function(filename) {
+  mockError();
+};
+
+exports.readFile = readFile;
